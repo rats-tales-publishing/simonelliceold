@@ -131,6 +131,12 @@ function isScrolledIntoView() {
 			document.getElementsByClassName("chapterNumber")[0].innerText = 1;
 			document.getElementsByClassName("chapterTitle")[0].innerText = "Preview";
 			navigation.parentElement.classList.remove("active");
+		} else if (isVisible(document.getElementById("deadground"))){
+			chapterBox.getElementsByClassName("title")[0].getElementsByTagName("a")[0].textContent = "Dead Ground";
+			chapterBox.getElementsByClassName("title")[0].getElementsByTagName("a")[0].setAttribute("href", "#deadground");
+			document.getElementsByClassName("chapterNumber")[0].innerText = 1;
+			document.getElementsByClassName("chapterTitle")[0].innerText = "Preview";
+			navigation.parentElement.classList.remove("active");
 		} else {
 			if(currentLink){
 				currentLink.parentElement.classList.remove("active");
@@ -180,6 +186,8 @@ document.addEventListener("click", function(event){
 		document.querySelector("#starlight").scrollIntoView({ behavior: 'smooth' });
 	} else if (event.target.getAttribute("href") == "#gofast"){
 		document.querySelector("#gofast").scrollIntoView({ behavior: 'smooth' });
+	} else if (event.target.getAttribute("href") == "#deadground"){
+		document.querySelector("#deadground").scrollIntoView({ behavior: 'smooth' });
 	} else if (event.target.parentElement.getAttribute("href") == "#home") {
 		event.preventDefault();
 		document.querySelector("#home").scrollIntoView({ behavior: 'smooth' });
