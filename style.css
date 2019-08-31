@@ -305,6 +305,15 @@ nav.small .nav__logo{
     color: #d3bd84;
     font-size: 18px;
     max-width: 580px;
+    margin: 10px auto 0 auto;
+    padding: 0 30px;
+}
+
+.quote{
+    color: #d3bd84;
+    font-size: 28px;
+    font-style: italic;
+    max-width: 580px;
     margin: 30px auto;
     padding: 0 30px;
 }
@@ -324,17 +333,22 @@ nav.small .nav__logo{
 
 .mainText{
 	background: white;
-	padding: 40px 60px;
+	padding: 30px 60px;
 	width: 700px;
 	max-width: 100%;
 	margin: 0 auto;
 }
 
-.mainText article, .mainText .simArticle{
+.mainText article, .mainText .simArticle {
 	position: relative;
 	height: 0;
 	visibility: hidden;
 	overflow: hidden;
+}
+
+.mainText article .right, .mainText .simArticle .right {
+	text-align: right;
+	padding-right: 120px;
 }
 
 .mainText article p, .mainText .simArticle p{
@@ -357,13 +371,19 @@ img.full-img {
 	max-height: initial;
 }
 
-.mainText article img, .mainText .simArticle img{
+.mainText article img, .mainText .simArticle img {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	max-width: 300px;
 	max-height: 215px;
 	margin: 0 auto;
 	display: block;
+}
+
+img.bio {
+	padding-top: 0;
+	max-width: 420px !important;
+	max-height: 420px !important;
 }
 
 .mainText article p:last-of-type, .mainText .simArticle p:last-of-type{
@@ -588,7 +608,7 @@ article.show:after, .simArticle.show:after{
 
 	.mainText{
 		background: white;
-		padding: 80px 140px;
+		padding: 30px 60px;
 		width: 700px;
 		max-width: 100%;
 		margin: 0 auto;
